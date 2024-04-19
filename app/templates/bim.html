@@ -4,35 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Image Exposure Adjustment</title>
-<style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f0f0f0;
-    }
-    .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      text-align: center;
-    }
-    img {
-      max-width: 100%;
-      max-height: 80vh;
-      filter: brightness(100%);
-      transition: filter 0.3s ease;
-    }
-    input[type="range"] {
-      width: 80%;
-      max-width: 300px;
-      margin: 20px 0;
-    }
-  </style>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bim.css') }}">
+
   
 </head>
 <body>
@@ -42,14 +15,6 @@
   <input type="range" id="exposure" min="0" max="255" value="100">
 </div>
 
-<script>
-  const image = document.getElementById('image');
-  const slider = document.getElementById('exposure');
-
-  slider.oninput = function() {
-    const exposureValue = this.value;
-    image.style.filter = `brightness(${exposureValue}%)`;
-  }
-</script>
+<script src="{{ url_for('static', filename='js/bim.js') }}"></script>
 </body>
 </html>
