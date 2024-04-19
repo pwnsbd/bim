@@ -24,7 +24,9 @@ def uploads():
             im = Image.open(file)
             data = io.BytesIO()
             ext = file.filename.rsplit('.', 1)[1].lower()
-            im.save(data, f"{ext}")
+            if ext == 'jpg':
+                ext = 'JPEG'
+            im.save(data, f"{ext}".upper())
             encoded_img_data = base64.b64encode(data.getvalue())
             return render_template("bim.html", img_data=encoded_img_data.decode('utf-8'), img_type=ext)
         else:
