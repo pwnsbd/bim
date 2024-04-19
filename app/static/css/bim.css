@@ -1,27 +1,39 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-  }
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-  }
-  img {
-    max-width: 60%;
-    max-height: 60vh;
-    filter: brightness(100%);
-    transition: filter 0.3s ease;
-  }
-  input[type="range"] {
-    width: 80%;
-    max-width: 300px;
-    margin: 20px 0;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+img {
+  max-width: 60%;
+  max-height: 60vh;
+  filter: brightness(100%);
+  transition: filter 0.3s ease;
+}
+
+input[type="range"] {
+  width: 80%;
+  max-width: 300px;
+  margin: 20px 0;
+}
+
+.exposure-container {
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Align items vertically */
+}
+
+.exposure-container h6 {
+    margin-right: 10px; /* Add some spacing between label and slider */
+}
